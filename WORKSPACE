@@ -8,6 +8,8 @@ http_archive(
     url = "https://github.com/bazelbuild/bazel/archive/%s.zip" % BAZEL_TAG,
     sha256 = BAZEL_SHA,
     strip_prefix = "bazel-" + BAZEL_TAG,
+    patches = ["//:0001-fix-invalid-javadoc.patch"],
+    patch_args = ["-p1"]
 )
 
 BAZEL_SKYLIB_TAG = "1.0.3"

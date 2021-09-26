@@ -1,0 +1,29 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Timoth=C3=A9e=20Peignier?= <timothee.peignier@icloud.com>
+Date: Sat, 25 Sep 2021 18:24:20 -0700
+Subject: Fix invalid javadoc
+
+
+diff --git a/src/main/java/net/starlark/java/annot/StarlarkMethod.java b/src/main/java/net/starlark/java/annot/StarlarkMethod.java
+index dfcdec9ac7..6deec021a5 100644
+--- a/src/main/java/net/starlark/java/annot/StarlarkMethod.java
++++ b/src/main/java/net/starlark/java/annot/StarlarkMethod.java
+@@ -142,12 +142,12 @@ public @interface StarlarkMethod {
+    *
+    * <p>If this is left as default, it is an error for the caller to pass any named arguments not
+    * explicitly declared by the method signature. If this is defined, all additional named arguments
+-   * are passed as elements of a {@link Dict<String, Object>} to the method.
++   * are passed as elements of a <code>Dict<String, Object></code> to the method.
+    *
+    * <p>See Python's <code>**kwargs</code> (http://thepythonguru.com/python-args-and-kwargs/).
+    *
+-   * <p>If defined, the annotated method must declare a corresponding parameter to which a {@code
+-   * Dict<String, Object>} may be assigned. See the interface-level javadoc for details.
++   * <p>If defined, the annotated method must declare a corresponding parameter to which a <code
++   * Dict<String, Object></code> may be assigned. See the interface-level javadoc for details.
+    */
+   Param extraKeywords() default @Param(name = "");
+ 
+-- 
+2.30.1 (Apple Git-130)
+
