@@ -59,7 +59,7 @@ StarlarkSemantics semantics = StarlarkSemantics.DEFAULT;
 try (Mutability mu = Mutability.create("scope")) {
     StarlarkThread thread = new StarlarkThread(mu, semantics);
     Module module = Module.withPredeclared(semantics, new HashMap<>());
-    Program program = Program.compileExpr(Expression.parse(ParserInput.fromLines("print('hello)")), module, FileOptions.DEFAULT);
+    Program program = Program.compileExpr(Expression.parse(ParserInput.fromLines("print('hello')")), module, FileOptions.DEFAULT);
     Starlark.execFileProgram(program, module, thread);
 }
 ```
@@ -72,7 +72,7 @@ Mutability.create("scope").use { mu ->
     val thread = StarlarkThread(mu, semantics)
     val module = Module.withPredeclared(semantics, emptyMap())
     val program =
-        Program.compileExpr(Expression.parse(ParserInput.fromLines("""print("hello)""")), module, FileOptions.DEFAULT)
+        Program.compileExpr(Expression.parse(ParserInput.fromLines("""print("hello")""")), module, FileOptions.DEFAULT)
     Starlark.execFileProgram(program, module, thread)
 }
 ```
