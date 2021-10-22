@@ -7,46 +7,25 @@ caution if you decide to use this library.
 
 ## Installation
 
-This library is published to Github Packages, you can add it in your project fairly easily.
+This library is published to Treasure Data internal maven repository, you can add it in your project fairly easily.
 
 ### Using Gradle
 
 ```kotlin
 repositories {
     maven {
-        url = uri("https://maven.pkg.github.com/cyberdelia/starlark")
+        url = uri("https://treasuredata.jfrog.io/treasuredata/libs-release")
         credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
-            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            username = System.getenv("TD_JFROG_USERNAME") 
+            password = System.getenv("TD_JFROG_PASSWORD")
         }
     }
 }
 
 dependencies {
-    implementation("com.lapanthere:starlark:4.2.1")
+    implementation("com.treasuredata:starlark:4.2.1")
 }
 ```
-
-You can also refer
-to [Github documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#using-a-published-package)
-for further details.
-
-### Using Maven
-
-```xml
-
-<dependencies>
-    <dependency>
-        <groupId>com.lapanthere</groupId>
-        <artifactId>starlark</artifactId>
-        <version>4.2.1</version>
-    </dependency>
-</dependencies>
-```
-
-You can also refer
-to [Github documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#installing-a-package)
-for further details.
 
 ## Usage
 
