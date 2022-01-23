@@ -14,7 +14,7 @@ This library is published to Github Packages, you can add it in your project fai
 ```kotlin
 repositories {
     maven {
-        url = uri("https://treasuredata.jfrog.io/treasuredata/libs-release")
+        url = uri("https://maven.pkg.github.com/cyberdelia/starlark")
         credentials {
             username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
             password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
