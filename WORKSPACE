@@ -1,14 +1,13 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-BAZEL_TAG = "4.2.2"
-BAZEL_SHA = "4c179ce66bbfff6ac5d81b8895518096e7f750866d08da2d4a574d1b8029e914"
+BAZEL_TAG = "5.0.0"
+BAZEL_SHA = "ce1b391335bd417b5f7ec99e9049aee751b24f4a0e61a6dad3535f0e108bc182"
 
 http_archive(
     name = "bazel",
     url = "https://github.com/bazelbuild/bazel/archive/%s.zip" % BAZEL_TAG,
     sha256 = BAZEL_SHA,
     strip_prefix = "bazel-" + BAZEL_TAG,
-    patches = ["//:0001-fix-invalid-javadoc.patch"],
     patch_args = ["-p1"]
 )
 
