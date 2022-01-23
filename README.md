@@ -39,7 +39,7 @@ for further details.
      <dependency>
          <groupId>com.lapanthere</groupId>
          <artifactId>starlark</artifactId>
-         <version>4.2.1</version>
+         <version>5.0.0</version>
      </dependency>
  </dependencies>
  ```
