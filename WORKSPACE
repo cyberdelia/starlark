@@ -1,7 +1,7 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-BAZEL_TAG = "5.0.0"
-BAZEL_SHA = "ce1b391335bd417b5f7ec99e9049aee751b24f4a0e61a6dad3535f0e108bc182"
+BAZEL_TAG = "5.1.0"
+BAZEL_SHA = "a394a99cae2d28179e1afca5f5e867fe36143478b81ccb5713d003dd827cc0fe"
 
 http_archive(
     name = "bazel",
