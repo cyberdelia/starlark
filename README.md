@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.lapanthere:starlark:5.1.0")
+    implementation("com.lapanthere:starlark:5.3.2")
 }
 ```
 
@@ -39,7 +39,7 @@ for further details.
      <dependency>
          <groupId>com.lapanthere</groupId>
          <artifactId>starlark</artifactId>
-         <version>5.1.0</version>
+         <version>5.3.2</version>
      </dependency>
  </dependencies>
  ```

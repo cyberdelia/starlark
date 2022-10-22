@@ -2,7 +2,7 @@ load("@rules_jvm_external//:defs.bzl", "java_export")
 
 java_export(
   name = "starlark",
-  maven_coordinates = "com.lapanthere:starlark:5.1.0",
+  maven_coordinates = "com.lapanthere:starlark:5.3.2",
   exports = [
     "@bazel//src/main/java/net/starlark/java/annot",
     "@bazel//src/main/java/net/starlark/java/lib/json",

@@ -1,7 +1,7 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-BAZEL_TAG = "5.1.0"
-BAZEL_SHA = "a394a99cae2d28179e1afca5f5e867fe36143478b81ccb5713d003dd827cc0fe"
+BAZEL_TAG = "5.3.2"
+BAZEL_SHA = "a3fc942e8d67f06767f88469f79b6f456f853a293026b4b46e7b22526b036796"
 
 http_archive(
     name = "bazel",
@@ -11,8 +11,8 @@ http_archive(
     patch_args = ["-p1"]
 )
 
-BAZEL_SKYLIB_TAG = "1.0.3"
-BAZEL_SKYLIB_SHA = "1c531376ac7e5a180e0237938a2536de0c54d93f5c278634818e0efc952dd56c"
+BAZEL_SKYLIB_TAG = "1.3.0"
+BAZEL_SKYLIB_SHA = "74d544d96f4a5bb630d465ca8bbcfe231e3594e5aae57e1edbf17a6eb3ca2506"
 
 http_archive(
     name = "bazel_skylib",
@@ -43,8 +43,8 @@ load("@rules_jvm_external//:setup.bzl", "rules_jvm_external_setup")
 
 rules_jvm_external_setup()
 
-RULES_PKG_TAG = "0.5.1"
-RULES_PKG_SHA = "a89e203d3cf264e564fcb96b6e06dd70bc0557356eb48400ce4b5d97c2c3720d"
+RULES_PKG_TAG = "0.7.1"
+RULES_PKG_SHA = "451e08a4d78988c06fa3f9306ec813b836b1d076d0f055595444ba4ff22b867f"
 
 http_archive(
     name = "rules_pkg",
