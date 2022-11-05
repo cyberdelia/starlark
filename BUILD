@@ -1,5 +1,4 @@
 load("@rules_jvm_external//:defs.bzl", "java_export")
-load("@bazel_skylib//lib:selects.bzl", "selects")
 
 java_export(
   name = "starlark",
